@@ -1,0 +1,8 @@
+input.txt 1 1 1
+input.txt
+input.txt "" 1 2
+input.txt "" 1 ""
+input1.txt 1 1 2
+input.txt love like
+input.txt c test
+input.txt " " 0
