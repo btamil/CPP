@@ -1,22 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PmergeMe.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tponnusa <tponnusa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/14 16:03:17 by tponnusa          #+#    #+#             */
+/*   Updated: 2024/07/14 16:03:17 by tponnusa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "PmergeMe.hpp"
-
-template class PmergeMe<std::vector<int> >;
-template class PmergeMe<std::deque<int> >;
 
 template <typename Container>
 PmergeMe<Container>::PmergeMe(){}
 
 template <typename Container>
-PmergeMe<Container>::PmergeMe(const PmergeMe &other)
+PmergeMe<Container>::PmergeMe(const PmergeMe &src)
 {
-	(void)other;
+	(void)src;
 }
 
 template <typename Container>
-PmergeMe<Container> &PmergeMe<Container>::operator=(const PmergeMe &other)
+PmergeMe<Container> &PmergeMe<Container>::operator=(const PmergeMe &src)
 {
-	(void)other;
+	(void)src;
 	return (*this);
 }
 
@@ -96,7 +104,7 @@ void PmergeMe<Container>::calculateTime(Container &container, double &usedTime)
 	std::clock_t start = std::clock();
 	mergeInsertSort(container, 0, container.size() - 1);
 	std::clock_t end = std::clock();
-	double elapsed = static_cast<double>(end - start) / (CLOCKS_PER_SEC) * 100.0;
+	double elapsed = (static_cast<double>(end - start) / CLOCKS_PER_SEC) * 100.0;
 	usedTime = elapsed;
 }
 
@@ -107,6 +115,10 @@ void PmergeMe<Container>::printData(const Container &container) const
 		std::cout << *it << " ";
 	std::cout << std::endl;
 }
+
+template class PmergeMe<std::vector<int> >;
+template class PmergeMe<std::deque<int> >;
+
 
 
 

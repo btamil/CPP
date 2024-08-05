@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ReversePolishNotation.hpp"
+#include "RPN.hpp"
 
 int main(int ac, char **av)
 {
@@ -20,7 +20,7 @@ int main(int ac, char **av)
         std::cout << "Ex: 7 7 + 8 *" << std::endl;
         return (EXIT_FAILURE);
     }
-    ReversePolishNotation rpn;
+    RPN rpn;
     rpn.calculate(av[1]);
 
     return EXIT_SUCCESS;

@@ -6,7 +6,7 @@
 #    By: tponnusa <tponnusa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/11 14:33:00 by tponnusa          #+#    #+#              #
-#    Updated: 2024/07/11 14:33:07 by tponnusa         ###   ########.fr        #
+#    Updated: 2024/07/14 20:18:45 by tponnusa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CPP		= c++
 
 CPPFLAGS  = -Wall -Wextra -Werror -std=c++98
 
-SRC 	= main.cpp ReversePolishNotation.cpp
+SRC 	= main.cpp RPN.cpp
 
 OBJ     =  $(SRC:.cpp=.o)
 

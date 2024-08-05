@@ -6,7 +6,7 @@
 #    By: tponnusa <tponnusa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/27 13:13:51 by tponnusa          #+#    #+#              #
-#    Updated: 2024/05/27 13:13:54 by tponnusa         ###   ########.fr        #
+#    Updated: 2024/07/14 18:11:33 by tponnusa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CPP		= c++
 
 CPPFLAGS  = -Wall -Wextra -Werror -std=c++98
 
-SRC 	= main.cpp BitCoinExchange.cpp
+SRC 	= main.cpp BitcoinExchange.cpp
 
 OBJ     =  $(SRC:.cpp=.o)
 
